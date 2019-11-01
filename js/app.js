@@ -33,12 +33,27 @@ if (questionThree === 'Y' || questionThree === 'YES') {
 }
 
 //Question Four
-var questionFour = prompt('')
+
 
 //Question Five
 
 //Question Six
+var questionSix = prompt(userName + ', I am looking for a number between 1-50, can you guess my number?');
+var questionSixAnswer = 25;
+if (questionSix > questionSixAnswer) {
+  console.log('too high');
+  alert('too high');
+} else if (questionSix < questionSixAnswer) {
+  console.log('too low');
+  alert('too low');
+} else {
+  alert('Wow you guessed my number!');
+  console.log('Wow you guessed my number!');
+
+  //for(var i = 0; i < 5; i++) {
+//}
+}
 
 //Question Seven
 
-alert('Thank you for playing my game ' + userName);
+alert('Thank you for playing my game, ' + userName + '!');
