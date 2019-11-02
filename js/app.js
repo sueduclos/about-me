@@ -33,9 +33,22 @@ if (questionThree === 'Y' || questionThree === 'YES') {
 }
 
 //Question Four
-
+var questionFour = prompt('Am I the oldest child?').toUpperCase();
+if (questionFour === 'Y' || questionFour === 'YES') {
+  //console.log('Correct! I am the BOSS!);
+  alert('Correct! I am the BOSS!');
+} else {
+  alert('Incorrect!');
+}
 
 //Question Five
+var questionFive = prompt('Do I speak Korean?').toUpperCase();
+if (questionFive === 'N' || questionFive === 'NO') {
+  //console.log('Correct! Sadly, I do not.');
+  alert('Correct! Sadly, I do not.');
+} else {
+  alert('Incorrect!');
+}
 
 //Question Six
 var questionSix = prompt(userName + ', I am looking for a number between 1-50, can you guess my number?');
