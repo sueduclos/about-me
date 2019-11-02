@@ -6,49 +6,70 @@ alert('Welcome to my site ' + userName + '!');
 alert('Lets play a guessing game and learn more about me! ');
 
 //Question One
-var questionOne = prompt('Did I attend the University of Oklahoma?').toUpperCase();
-if (questionOne === 'Y' || questionOne === 'YES') {
-  //console.log('Correct! Boomer Sooner!');
-  alert('Correct! Boomer Sooner!');
-} else {
-  alert('Incorrect!');
+function questionOneFunction() {
+
+  var questionOne = prompt('Did I attend the University of Oklahoma?').toUpperCase();
+  if (questionOne === 'Y' || questionOne === 'YES') {
+    //console.log('Correct! Boomer Sooner!');
+    alert('Correct! Boomer Sooner!');
+  } else {
+    alert('Incorrect!');
+  }
 }
+
+questionOneFunction();
 
 //Question Two
-var questionTwo = prompt('Do I have 5 children?').toUpperCase();
-if (questionTwo === 'N' || questionTwo === 'NO') {
-  //console.log('Correct! Whew! That would be a lot of children!');
-  alert('Correct! Whew, that would be A LOT of children!');
-} else {
-  alert('Incorrect!');
+function questionTwoFunction() {
+  var questionTwo = prompt('Do I have 5 children?').toUpperCase();
+  if (questionTwo === 'N' || questionTwo === 'NO') {
+    //console.log('Correct! Whew! That would be a lot of children!');
+    alert('Correct! Whew, that would be A LOT of children!');
+  } else {
+    alert('Incorrect!');
+  }
 }
+
+questionTwoFunction();
 
 //Question Three
-var questionThree = prompt('Did I grow up in Germany?').toUpperCase();
-if (questionThree === 'Y' || questionThree === 'YES') {
-  //console.log('Correct! Guten Tag!');
-  alert('Correct! Guten Tag!');
-} else {
-  alert('Incorrect!');
+function questionThreeFunction() {
+  var questionThree = prompt('Did I grow up in Germany?').toUpperCase();
+  if (questionThree === 'Y' || questionThree === 'YES') {
+    //console.log('Correct! Guten Tag!');
+    alert('Correct! Guten Tag!');
+  } else {
+    alert('Incorrect!');
+  }
 }
+
+questionThreeFunction();
 
 //Question Four
-var questionFour = prompt('Am I the oldest child?').toUpperCase();
-if (questionFour === 'Y' || questionFour === 'YES') {
-  //console.log('Correct! I am the BOSS!);
-  alert('Correct! I am the BOSS!');
-} else {
-  alert('Incorrect!');
+function questionFourFunction() {
+  var questionFour = prompt('Am I the oldest child?').toUpperCase();
+  if (questionFour === 'Y' || questionFour === 'YES') {
+    //console.log('Correct! I am the BOSS!);
+    alert('Correct! I am the BOSS!');
+  } else {
+    alert('Incorrect!');
+  }
 }
 
+questionFourFunction();
+
 //Question Five
-var questionFive = prompt('Do I speak Korean?').toUpperCase();
-if (questionFive === 'N' || questionFive === 'NO') {
-  //console.log('Correct! Sadly, I do not.');
-  alert('Correct! Sadly, I do not.');
-} else {
-  alert('Incorrect!');
+function questionFiveFunction() {
+  var questionFive = prompt('Do I speak Korean?').toUpperCase();
+  if (questionFive === 'N' || questionFive === 'NO') {
+    //console.log('Correct! Sadly, I do not.');
+    alert('Correct! Sadly, I do not.');
+  } else {
+    alert('Incorrect!');
+  }
 }
+
+questionFiveFunction();
 
 //Question Six
 var questionSix = prompt(userName + ', I am looking for a number between 1-50, can you guess my number?');
