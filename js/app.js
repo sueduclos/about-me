@@ -87,22 +87,22 @@ function questionSixFunction() {
   while(attempts < attemptsAllowed) {
     var questionSix = prompt(userName + ', I am looking for a number between 1-50, can you guess my number? You have ' + (attemptsAllowed - attempts) + ' attempts!');
     if (questionSix > questionSixAnswer) {
-      console.log('Too high! Try again!');
+      // console.log('Too high! Try again!');
       alert('Too high! Try again!');
       attempts++;
     } else if (questionSix < questionSixAnswer) {
-      console.log('Too low!Try again!');
+      // console.log('Too low!Try again!');
       alert('Too low! Try again!');
       attempts++;
     } else {
       alert('Wow, you guessed my number!');
-      console.log('Wow, you guessed my number!');
+      // console.log('Wow, you guessed my number!');
       gameScore++;
       break;
     }
   }
   if (attempts === attemptsAllowed) {
-    console.log('Sorry, you have reached your max attempts! This answer is ' + questionSixAnswer + '.');
+    // console.log('Sorry, you have reached your max attempts! This answer is ' + questionSixAnswer + '.');
     alert('Sorry, you have reached your max attempts! This answer is ' + questionSixAnswer + '.');
   }
 }
@@ -111,9 +111,14 @@ questionSixFunction();
 
 //Question Seven
 function questionSevenFunction() {
-  var 
+  var makeupBag = ['foundation', 'mascara', 'lipstick', 'blush', 'eyeliner'];
+
+  for(var i = 0; i < 6; i++) {
+    var questionSeven = prompt('What items do you think I have inside my makeup bag?');
+    
+}
 }
 
 questionSevenFunction();
 
-alert('Thank you for playing my game, ' + userName + '! \nYour final score is ' + gameScore + '!');
+alert('Thank you for playing my game, ' + userName + '! \nYour final score is ' + gameScore + ' out of 7 questions!');
