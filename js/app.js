@@ -6,12 +6,14 @@ alert('Welcome to my site ' + userName + '!');
 alert('Lets play a guessing game and learn more about me! ');
 
 //Question One
+var gameScore = 0;
 function questionOneFunction() {
 
   var questionOne = prompt('Did I attend the University of Oklahoma?').toUpperCase();
   if (questionOne === 'Y' || questionOne === 'YES') {
     //console.log('Correct! Boomer Sooner!');
     alert('Correct! Boomer Sooner!');
+    gameScore++;
   } else {
     alert('Incorrect!');
   }
@@ -25,6 +27,7 @@ function questionTwoFunction() {
   if (questionTwo === 'N' || questionTwo === 'NO') {
     //console.log('Correct! Whew! That would be a lot of children!');
     alert('Correct! Whew, that would be A LOT of children!');
+    gameScore++;
   } else {
     alert('Incorrect!');
   }
@@ -38,6 +41,7 @@ function questionThreeFunction() {
   if (questionThree === 'Y' || questionThree === 'YES') {
     //console.log('Correct! Guten Tag!');
     alert('Correct! Guten Tag!');
+    gameScore++;
   } else {
     alert('Incorrect!');
   }
@@ -51,6 +55,7 @@ function questionFourFunction() {
   if (questionFour === 'Y' || questionFour === 'YES') {
     //console.log('Correct! I am the BOSS!);
     alert('Correct! I am the BOSS!');
+    gameScore++;
   } else {
     alert('Incorrect!');
   }
@@ -64,6 +69,7 @@ function questionFiveFunction() {
   if (questionFive === 'N' || questionFive === 'NO') {
     //console.log('Correct! Sadly, I do not.');
     alert('Correct! Sadly, I do not.');
+    gameScore++;
   } else {
     alert('Incorrect!');
   }
@@ -72,21 +78,43 @@ function questionFiveFunction() {
 questionFiveFunction();
 
 //Question Six
-var questionSix = prompt(userName + ', I am looking for a number between 1-50, can you guess my number?');
-var questionSixAnswer = 25;
-if (questionSix > questionSixAnswer) {
-  console.log('Too high!');
-  alert('Too high!');
-} else if (questionSix < questionSixAnswer) {
-  console.log('Too low!');
-  alert('Too low!');
-} else {
-  alert('Wow, you guessed my number!');
-  console.log('Wow, you guessed my number!');
-  for(var i = 0; i < 5; i++) { 
+function questionSixFunction() {
+
+  var questionSixAnswer = 25;
+  var attempts = 0;
+  var attemptsAllowed = 4;
+  
+  while(attempts < attemptsAllowed) {
+    var questionSix = prompt(userName + ', I am looking for a number between 1-50, can you guess my number? You have ' + (attemptsAllowed - attempts) + ' attempts!');
+    if (questionSix > questionSixAnswer) {
+      console.log('Too high! Try again!');
+      alert('Too high! Try again!');
+      attempts++;
+    } else if (questionSix < questionSixAnswer) {
+      console.log('Too low!Try again!');
+      alert('Too low! Try again!');
+      attempts++;
+    } else {
+      alert('Wow, you guessed my number!');
+      console.log('Wow, you guessed my number!');
+      gameScore++;
+      break;
+    }
+  }
+  if (attempts === attemptsAllowed) {
+    console.log('Sorry, you have reached your max attempts! This answer is ' + questionSixAnswer + '.');
+    alert('Sorry, you have reached your max attempts! This answer is ' + questionSixAnswer + '.');
+  }
 }
-}
+
+questionSixFunction();
 
 //Question Seven
+function questionSevenFunction() {
+  var 
 
-alert('Thank you for playing my game, ' + userName + '!');
+}
+
+questionSevenFunction();
+
+alert('Thank you for playing my game, ' + userName + '! \nYour final score is ' + gameScore + '!');
