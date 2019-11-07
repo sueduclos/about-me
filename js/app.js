@@ -112,7 +112,6 @@ questionSixFunction();
 //Question Seven
 function questionSevenFunction() {
   var 
-
 }
 
 questionSevenFunction();
