@@ -83,16 +83,16 @@ function questionSixFunction() {
   var questionSixAnswer = 25;
   var attempts = 0;
   var attemptsAllowed = 4;
-  
+
   while(attempts < attemptsAllowed) {
     var questionSix = prompt(userName + ', I am looking for a number between 1-50, can you guess my number? You have ' + (attemptsAllowed - attempts) + ' attempts!');
     if (questionSix > questionSixAnswer) {
       // console.log('Too high! Try again!');
-      alert('Too high! Try again!');
+      alert('Too high!');
       attempts++;
     } else if (questionSix < questionSixAnswer) {
       // console.log('Too low!Try again!');
-      alert('Too low! Try again!');
+      alert('Too low!');
       attempts++;
     } else {
       alert('Wow, you guessed my number!');
@@ -111,12 +111,20 @@ questionSixFunction();
 
 //Question Seven
 function questionSevenFunction() {
-  var makeupBag = ['foundation', 'mascara', 'lipstick', 'blush', 'eyeliner'];
+  var makeupBag = ['foundation', 'mascara', 'lipstick', 'blush', 'eyeliner'].toLowercase();
 
   for(var i = 0; i < 6; i++) {
-    var questionSeven = prompt('What items do you think I have inside my makeup bag?');
-    
-}
+    var questionSeven = prompt('Can you guess what items I have inside my makeup bag?');
+    // console.log(questionSeven);
+
+    if (questionSeven === makeupBag[i]) {
+      alert('You are right I have ' + questionSeven + ' in my makeup bag!');
+      gameScore++;
+      break;
+    } else {
+      alert('Sorry, I do not have ' + questionSeven + ' in my makeup bag! Please guess again!');
+    }
+  }
 }
 
 questionSevenFunction();
