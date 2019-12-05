@@ -111,13 +111,13 @@ questionSixFunction();
 
 //Question Seven
 function questionSevenFunction() {
-  var makeupBag = ['foundation', 'mascara', 'lipstick', 'blush', 'eyeliner'].toLowercase();
+  var makeupBag = ['foundation', 'mascara', 'lipstick', 'blush', 'eyeliner'];
 
   for(var i = 0; i < 6; i++) {
-    var questionSeven = prompt('Can you guess what items I have inside my makeup bag?');
-    // console.log(questionSeven);
+    var questionSeven = prompt('Can you guess what items I have inside my makeup bag?').toLowerCase();
+    console.log(questionSeven);
 
-    if (questionSeven === makeupBag[i]) {
+    if (makeupBag.includes(questionSeven)) {
       alert('You are right I have ' + questionSeven + ' in my makeup bag!');
       gameScore++;
       break;
