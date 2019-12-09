@@ -12,7 +12,18 @@ header {
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+    padding:10px;
 }
 h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+section {
+    height: 100px;
+}
+p {
+    height: 25px;
+}
+article {
+    text-align: center;
 }
