@@ -1,3 +1,18 @@
 body {
-    background-color: rgb(62, 200, 200);
+    width: 100vw;
+    background-image: url('../img/henry-be-IicyiaPYGGI-unsplash.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+header {
+    height:75px;
+    padding:25px;
+    font-size: 50px;
+}
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
