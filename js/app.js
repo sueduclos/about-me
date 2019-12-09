@@ -114,11 +114,11 @@ function questionSevenFunction() {
   var makeupBag = ['foundation', 'mascara', 'lipstick', 'blush', 'eyeliner'];
 
   for(var i = 0; i < 6; i++) {
-    var questionSeven = prompt('Can you guess what items I have inside my makeup bag?').toLowerCase();
+    var questionSeven = prompt('Can you guess one of the items I have inside my makeup bag?').toLowerCase();
     console.log(questionSeven);
 
     if (makeupBag.includes(questionSeven)) {
-      alert('You are right I have ' + questionSeven + ' in my makeup bag!');
+      alert('You are right I have ' + questionSeven + ' in my makeup bag! Possible correct answers were: ' + makeupBag + '!');
       gameScore++;
       break;
     } else {
